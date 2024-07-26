@@ -1,0 +1,127 @@
+#game {
+    display: grid;
+    place-items: center;
+    width: 100% ;
+    height: 600px ;
+}
+
+html, body {
+    background: var(--default) ;
+    height: 100% ;
+
+}
+
+:root {
+    --default: black;
+    --empty: #3a3a3c ;
+    --wrong: #b59f3b ;
+    --right: #538d4e ;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-template-rows: repeat(5,auto);
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: white; 
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 2.5rem;
+}
+
+.box.empty{
+    background: var(--empty) ;
+}
+
+.box.wrong{
+    background: var(--wrong) ;
+}
+
+.box.right{
+    background: var(--right) ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between elements */
+}
+
+#title {
+    color: white ;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Add space between title and grid */
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#nbaImgLeft,
+#nbaImgRight {
+    width: 100px; /* Adjust image width as needed */
+}
+
+#nbaImgLeft img,
+#nbaImgRight img {
+    width: 100%; /* Make sure images fill their containers */
+}
+
+#nbaImgLeft img {
+    width: 100% ;
+    height: auto ;
+
+}
+
+.animated {
+    animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1) ;
+    }
+}
+
+#keyboard{
+    height : auto;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px ;
+    touch-action: manipulation;
+}
+
+.keyboard-row button {
+    font-family: inherit;
+    font-weight:bold; 
+    border: 0;
+    padding: 0;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgb(129,131,132);
+    color: rgb(215,218,220) ;
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 4px;
+    user-select: none;
+}
