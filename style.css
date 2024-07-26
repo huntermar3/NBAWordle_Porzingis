@@ -54,26 +54,26 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* Add space between elements */
+    margin-bottom: 20px; 
 }
 
 #title {
     color: white ;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10px; /* Add space between title and grid */
+    margin-bottom: 10px; 
     font-size: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
 #nbaImgLeft,
 #nbaImgRight {
-    width: 100px; /* Adjust image width as needed */
+    width: 100px; 
 }
 
 #nbaImgLeft img,
 #nbaImgRight img {
-    width: 100%; /* Make sure images fill their containers */
+    width: 100%;
 }
 
 #nbaImgLeft img {
